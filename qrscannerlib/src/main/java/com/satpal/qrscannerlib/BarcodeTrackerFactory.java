@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.satpal.qrscanner;
+package com.satpal.qrscannerlib;
 
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.Tracker;
 import com.google.android.gms.vision.barcode.Barcode;
-import com.satpal.qrscanner.camera.GraphicOverlay;
+import com.satpal.qrscannerlib.camera.GraphicOverlay;
 
 /**
  * Factory for creating a tracker and associated graphic to be associated with a new barcode.  The

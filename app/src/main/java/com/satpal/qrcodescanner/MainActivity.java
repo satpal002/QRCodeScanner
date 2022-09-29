@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.vision.barcode.Barcode;
-import com.satpal.qrscanner.BarcodeReader;
+import com.satpal.qrscannerlib.BarcodeReader;
 
 import java.util.List;
 

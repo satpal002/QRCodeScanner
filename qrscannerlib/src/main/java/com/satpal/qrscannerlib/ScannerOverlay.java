@@ -1,4 +1,4 @@
-package com.satpal.qrscanner;
+package com.satpal.qrscannerlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;

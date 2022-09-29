@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.satpal.qrscanner.camera;
+package com.satpal.qrscannerlib.camera;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -40,7 +40,6 @@ import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.Frame;
 
 import java.io.IOException;
-import java.lang.Thread.State;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.nio.ByteBuffer;

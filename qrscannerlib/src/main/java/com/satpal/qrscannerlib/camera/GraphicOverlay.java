@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.satpal.qrscanner.camera;
+package com.satpal.qrscannerlib.camera;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.Vector;
 
 /**
  * A view which renders a series of custom graphics to be overlayed on top of an associated preview
@@ -158,7 +158,8 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
      */
     public List<T> getGraphics() {
         synchronized (mLock) {
-            return new Vector(mGraphics);
+//            return new Vector(mGraphics);
+            return new ArrayList<>(mGraphics);
         }
     }
 

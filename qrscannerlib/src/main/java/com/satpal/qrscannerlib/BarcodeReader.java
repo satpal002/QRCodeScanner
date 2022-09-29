@@ -1,8 +1,7 @@
-package com.satpal.qrscanner;
+package com.satpal.qrscannerlib;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -41,9 +40,9 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
-import com.satpal.qrscanner.camera.CameraSource;
-import com.satpal.qrscanner.camera.CameraSourcePreview;
-import com.satpal.qrscanner.camera.GraphicOverlay;
+import com.satpal.qrscannerlib.camera.CameraSource;
+import com.satpal.qrscannerlib.camera.CameraSourcePreview;
+import com.satpal.qrscannerlib.camera.GraphicOverlay;
 
 import java.io.IOException;
 import java.util.List;
@@ -310,8 +309,8 @@ public class BarcodeReader extends Fragment implements View.OnTouchListener, Bar
         if (requestCode == PERMISSION_CALLBACK_CONSTANT) {
             //check if all permissions are granted
             boolean allgranted = false;
-            for (int i = 0; i < grantResults.length; i++) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+            for (int grantResult : grantResults) {
+                if (grantResult == PackageManager.PERMISSION_GRANTED) {
                     allgranted = true;
                 } else {
                     allgranted = false;
