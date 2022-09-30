@@ -3,6 +3,7 @@ package com.satpal.qrcodescanner;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
 
     private BarcodeReader barcodeReader;
 
+    Boolean useFlash = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,15 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         // getting barcode instance
         barcodeReader = (BarcodeReader) getSupportFragmentManager().findFragmentById(R.id.barcode_fragment);
 
+
+
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                useFlash = !useFlash;
+                barcodeReader.useFlash(useFlash);
+            }
+        });
 
         /***
          * Providing beep sound. The sound file has to be placed in

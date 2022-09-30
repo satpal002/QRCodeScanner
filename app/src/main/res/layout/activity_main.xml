@@ -24,6 +24,14 @@
         app:line_speed="6"
         app:line_width="4"
         app:square_height="200"
-        app:square_width="200" />
+        app:square_width="200" >
 
+
+    </com.satpal.qrscannerlib.ScannerOverlay>
+    <Button
+        android:id="@+id/button"
+        android:gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 </RelativeLayout>

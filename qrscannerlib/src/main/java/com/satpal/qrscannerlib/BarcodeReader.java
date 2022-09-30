@@ -464,6 +464,12 @@ public class BarcodeReader extends Fragment implements View.OnTouchListener, Bar
         }
     }
 
+    public void useFlash(boolean enableFlash) {
+        useFlash = enableFlash;
+        mCameraSource.setFlashMode(useFlash ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF );
+    }
+
+
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onSingleTapConfirmed(MotionEvent e) {
