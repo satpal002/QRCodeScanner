@@ -7,17 +7,17 @@
     android:background="#00ff00"
     android:orientation="vertical">
 
-    <com.satpal.qrscanner.camera.CameraSourcePreview
+    <com.satpal.qrscannerlib.camera.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.satpal.qrscanner.camera.GraphicOverlay
+        <com.satpal.qrscannerlib.camera.GraphicOverlay
             android:id="@+id/graphicOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
 
-    </com.satpal.qrscanner.camera.CameraSourcePreview>>
+    </com.satpal.qrscannerlib.camera.CameraSourcePreview>>
 
 </LinearLayout>

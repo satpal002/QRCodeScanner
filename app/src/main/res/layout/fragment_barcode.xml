@@ -8,14 +8,14 @@
     <!-- Barcode Reader fragment -->
     <fragment
         android:id="@+id/barcode_fragment"
-        android:name="com.satpal.qrscanner.BarcodeReader"
+        android:name="com.satpal.qrscannerlib.BarcodeReader"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:auto_focus="true"
         app:use_flash="false" />
 
     <!-- Scanner overlay animation -->
-    <com.satpal.qrscanner.ScannerOverlay
+    <com.satpal.qrscannerlib.ScannerOverlay
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#44000000"
