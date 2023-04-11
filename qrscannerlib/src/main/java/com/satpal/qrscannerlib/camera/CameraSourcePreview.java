@@ -93,13 +93,14 @@ public class CameraSourcePreview extends ViewGroup {
                 Size size = mCameraSource.getPreviewSize();
                 int min = Math.min(size.getWidth(), size.getHeight());
                 int max = Math.max(size.getWidth(), size.getHeight());
-                if (isPortraitMode()) {
-                    // Swap width and height sizes when in portrait, since it will be rotated by
-                    // 90 degrees
-                    mOverlay.setCameraInfo(min, max, mCameraSource.getCameraFacing());
-                } else {
-                    mOverlay.setCameraInfo(max, min, mCameraSource.getCameraFacing());
-                }
+//                if (isPortraitMode()) {
+//                    // Swap width and height sizes when in portrait, since it will be rotated by
+//                    // 90 degrees
+//                    mOverlay.setCameraInfo(min, max, mCameraSource.getCameraFacing());
+//                } else {
+//                    mOverlay.setCameraInfo(max, min, mCameraSource.getCameraFacing());
+//                }
+                mOverlay.setCameraInfo(max, min, mCameraSource.getCameraFacing());
                 mOverlay.clear();
             }
             mStartRequested = false;
@@ -147,20 +148,20 @@ public class CameraSourcePreview extends ViewGroup {
         int layoutHeight = bottom - top;
 
         // Swap width and height sizes when in portrait, since it will be rotated 90 degrees
-        if (isPortraitMode()) {
-            int tmp = width;
-            //noinspection SuspiciousNameCombination
-            width = height;
-            height = tmp;
-        }
+//        if (isPortraitMode()) {
+//            int tmp = width;
+//            //noinspection SuspiciousNameCombination
+//            width = height;
+//            height = tmp;
+//        }
 
         int childWidth = layoutWidth;
         int childHeight = (int) (((float) layoutWidth / (float) width) * height);
 
-        if (isPortraitMode()) {
-            childHeight = layoutHeight;
-            childWidth = (int) (((float) layoutHeight / (float) height) * width);
-        }
+//        if (isPortraitMode()) {
+//            childHeight = layoutHeight;
+//            childWidth = (int) (((float) layoutHeight / (float) height) * width);
+//        }
 
         for (int i = 0; i < getChildCount(); ++i) {
             getChildAt(i).layout(0, 0, childWidth, childHeight);
